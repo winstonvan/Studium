@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="24dp"
+    android:paddingRight="24dp" >
+
+    <TextView
+        android:id="@+id/PostingTitle_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#348fcd"
+        android:text="@string/Title"
+        android:textSize="50sp" />
+
+    <TextView
+        android:id="@+id/PostedBy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/authorName"
+        android:layout_below="@id/PostingTitle_textview"
+        android:layout_marginBottom="20dp"
+        android:text="@string/PostedBy"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/authorPic"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/PostingTitle_textview"
+        android:layout_toRightOf="@id/PostedBy" />
+
+    <TextView
+        android:id="@+id/authorName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/PostingTitle_textview"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/authorPic"
+        android:text="@string/AuthorName"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/postingContent_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/PostedBy"
+        android:layout_marginTop="10dp"
+        android:text="@string/Content"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/postingContent_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/postingContent_title"
+        android:layout_marginTop="5dp"
+        android:text="@string/Content"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/reply_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/postingContent_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/Reply"
+        android:textSize="20sp" />
+
+    <com.example.studium_test.ConstraintHeightListView
+        android:id="@+id/listview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/reply_title"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="1" 
+        custom:maxHeight="136dp"/>
+
+    <ScrollView
+        android:id="@+id/sv"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/listview"
+        android:layout_centerHorizontal="true"
+        android:fillViewport="true"
+        android:scrollbars="vertical" >
+
+        <EditText
+            android:id="@+id/ReplyContent_edittext"
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1.0"
+            android:background="#ffffff"
+            android:gravity="top|start"
+            android:lineSpacingMultiplier="1.0"
+            android:maxHeight="450dp"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+    </ScrollView>
+
+    <Button
+        android:id="@+id/AddReply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/sv"
+        android:text="@string/Add" />
+
+</RelativeLayout>

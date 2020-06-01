@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/searchFilters"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/searchFilters"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/byAuthor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/searchByAuthor"
+        android:textSize="15dp" />
+
+    <EditText
+        android:id="@+id/inputAuthorName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/inputAuthorName"
+        android:textSize="13dp" />
+
+    <TextView
+        android:id="@+id/byContentType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/searchByContentType"
+        android:textSize="15dp" />
+
+    <Spinner   
+        android:id="@+id/spinner"  
+        android:layout_width="fill_parent"  
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/search" />
+    </LinearLayout>
+    
+    <TextView 
+        android:id="@+id/searchResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/searchResult"
+        android:textSize="20dp"
+        />
+    <LinearLayout  
+        android:layout_width="match_parent"  
+        android:layout_height="wrap_content"  
+        android:baselineAligned="true"  
+        android:orientation="horizontal">  
+        <!--android:baselineAligned="false"-->  
+  
+  
+        <com.example.studium_test.ConstraintHeightListView  
+            android:id="@+id/list2"  
+            android:layout_width="50dp"  
+            android:layout_height="wrap_content"  
+            android:layout_weight="1"
+            custom:maxHeight="200dp" />  
+  
+    </LinearLayout>  
+
+</LinearLayout>

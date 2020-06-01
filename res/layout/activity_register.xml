@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="24dp"
+    android:paddingRight="24dp"
+    android:paddingTop="24dp" >
+
+    <TextView
+        android:id="@+id/profilePicture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:text="@string/profilePicture"
+        android:textSize="18sp" />
+
+    <!-- Profile pictures -->
+
+    <com.example.studium_test.CustomNestRadioGroup
+        android:id="@+id/selectProfilePicture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profilePicture"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp" >
+
+        <RadioButton
+            android:id="@+id/pic1"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/pic1"
+            android:checked="true"
+            android:text="01"
+            android:textSize="0sp" />
+
+        <RadioButton
+            android:id="@+id/pic2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/pic2"
+            android:text="02"
+            android:textSize="0sp" />
+
+        <RadioButton
+            android:id="@+id/pic3"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/pic3"
+            android:text="03"
+            android:textSize="0sp" />
+
+        <RadioButton
+            android:id="@+id/pic4"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/pic4"
+            android:text="04"
+            android:textSize="0sp" />
+    </com.example.studium_test.CustomNestRadioGroup>
+
+    <!-- Username -->
+
+    <TextView
+        android:id="@+id/UserName_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/UserName_edittext"
+        android:layout_below="@id/selectProfilePicture"
+        android:layout_marginTop="50dp"
+        android:text="@string/UserName"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/UserName_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/selectProfilePicture"
+        android:layout_toRightOf="@id/UserName_textview" />
+
+    <!-- Password -->
+
+    <TextView
+        android:id="@+id/Password_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/Password_edittext"
+        android:layout_below="@id/UserName_edittext"
+        android:layout_marginTop="10dp"
+        android:text="@string/Password"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/Password_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/UserName_edittext"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/Password_textview" />
+
+    <!-- Buttons -->
+
+    <Button
+        android:id="@+id/Register"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Password_edittext"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="30dp"
+        android:text="@string/Register" />
+
+    <Button
+        android:id="@+id/Back"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Register"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="10dp"
+        android:text="Back"
+        android:textAlignment="gravity" />
+
+</RelativeLayout>

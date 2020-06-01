@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <ImageView 
+        android:id="@+id/profilePic"
+        android:layout_centerHorizontal="true"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/pic1"
+        android:layout_marginTop="30dp"
+        />
+    <TextView 
+        android:id="@+id/userName"
+        android:layout_below="@id/profilePic"
+        android:text="@string/showUserName"
+        android:textSize="18sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    <TextView 
+        android:id="@+id/currentStatus"
+        android:layout_below="@id/userName"
+        android:text="@string/currentStatus"
+        android:textSize="18sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    <TextView 
+        android:id="@+id/sumPosting"
+        android:layout_below="@id/currentStatus"
+        android:text="@string/sumPosting"
+        android:textSize="18sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    <TextView 
+        android:id="@+id/sumReply"
+        android:layout_below="@id/sumPosting"
+        android:text="@string/sumReply"
+        android:textSize="18sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    <Button 
+        android:id="@+id/changeProfile"
+        android:layout_below="@id/sumReply"
+        android:text="@string/changeProfile"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    <Button 
+        android:id="@+id/signOut"
+        android:layout_below="@id/changeProfile"
+        android:text="@string/signOut"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+</RelativeLayout>
+

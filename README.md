@@ -20,3 +20,6 @@ Studium is a virtual tutoring application written in Java for Android. It is des
   <li>Chat with professionals</li>
   <li>Badge system: Users earn badges by asking/answering questions and/or completing other tasks</li>
 </ul>
+
+<img src = "https://i.imgur.com/Axcc1cN.png" />
+<img src = "https://i.imgur.com/tkiVtpB.png" />
